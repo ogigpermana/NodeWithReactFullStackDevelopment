@@ -13,4 +13,11 @@ module.exports = {
 ```
 demo aplikasinya link dibawah ini:
 
+untuk mencoba di local server cara seperti dibawah ini :
+``
+http://localhost:9000/auth/google
+``
+
+hasilnya bisa dilihat pada logs yang ada di terminal!
+
 [Startup Reviewer](https://startup-reviewer.herokuapp.com/)
