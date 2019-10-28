@@ -11,13 +11,18 @@ module.exports = {
     googleClientSecret: 'SlKisidengangoogleclientsecret'
 };
 ```
-demo aplikasinya link dibawah ini:
 
 untuk mencoba di local server cara seperti dibawah ini :
+
 ``
 http://localhost:9000/auth/google
 ``
 
+penambahan nodemon pada aplikasi untuk membantu me restart local server secara otomatis pada saat ada perunahan pada file, contoh jika kita ubah data yang ada pada file index.js maka secara otomatis nodemon akan me start server ulang
+
+contoh penerapannya : `` npm run dev``
+
 hasilnya bisa dilihat pada logs yang ada di terminal!
 
+demo aplikasinya link dibawah ini:
 [Startup Reviewer](https://startup-reviewer.herokuapp.com/)
