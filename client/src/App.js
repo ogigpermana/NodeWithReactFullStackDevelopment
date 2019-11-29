@@ -7,21 +7,27 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hi There</h1>
+        <h1>Surel Feedback Information</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Welcome to SFI
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+         <a href="/auth/google" style={myGoogleButton}>Sign In With Google</a>
       </header>
     </div>
   );
 }
+
+const myGoogleButton = {
+  height:"40px",
+  borderWidth:"0",
+  background:"#dd4b39",
+  color:"#fff",
+  borderRadius:"5px",
+  borderColor: "rgba(0,0,0,0.2)",
+  paddingLeft:"5px",
+  paddingRight:"5px",
+  paddingTop:"5px",
+  textDecoration:"none"
+};
 
 export default App;
