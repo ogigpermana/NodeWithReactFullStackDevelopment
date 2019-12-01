@@ -1,24 +1,33 @@
-import React, { Component } from 'react';
-import { Button, Navbar, Nav } from 'react-bootstrap';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
-class Header extends React.Component{
-    render(){
-        return(
-            <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="/">Surel Feedback Information</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">
-                        <Nav.Link href="/">Landing</Nav.Link>
-                        <Nav.Link href="/survey">Dashboard</Nav.Link>
-                        <Nav.Link href="/survey/new">Survey Name</Nav.Link>
-                    </Nav>
-                    <Button variant="primary" style={{ marginRight:'5px' }}>Login</Button>
-                    <Button variant="warning">SignUp</Button>
-                </Navbar.Collapse>
-            </Navbar>
-        );
-    }
+const useStyles = makeStyles(theme => ({
+    root: {
+        flexGrow: 1,
+      },
+      menuButton: {
+        marginRight: theme.spacing(2),
+      },
+      title: {
+        flexGrow: 1,
+      },
+}));
+
+
+export default function Header(){
+    const classes = useStyles();
+    return(
+        <AppBar position="static">
+            <Toolbar>
+                <Typography variant="h6" className={classes.title} href="/">
+                SFI
+                </Typography>
+                <Button variant="contained" color="default" href="/auth/google">Login With Google</Button>
+            </Toolbar>
+        </AppBar>
+    );
 }
-
-export default Header;
