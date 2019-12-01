@@ -1,33 +1,39 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Nav, Button } from 'react-bootstrap';
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        flexGrow: 1,
-      },
-      menuButton: {
-        marginRight: theme.spacing(2),
-      },
-      title: {
-        flexGrow: 1,
-      },
-}));
-
-
-export default function Header(){
-    const classes = useStyles();
+class Header extends Component{
+  renderState(){
+    switch(this.props.auth){
+      case null:
+        return "Load state...";
+      case false:
+        return "I am logout";
+      default:
+        return "I am loggedin";
+    }
+  }
+  render(){
+    console.log(this.props);
     return(
-        <AppBar position="static">
-            <Toolbar>
-                <Typography variant="h6" className={classes.title} href="/">
-                SFI
-                </Typography>
-                <Button variant="contained" color="default" href="/auth/google">Login With Google</Button>
-            </Toolbar>
-        </AppBar>
-    );
+      <Navbar bg="dark" expand="lg" variant="dark">
+        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#link">Link</Nav.Link>
+          </Nav>
+          <Button variant="outline-success">{this.renderState()}</Button>
+        </Navbar.Collapse>
+      </Navbar>
+    )
+  }
 }
+  
+function mapStateToProps({ auth }){
+  return { auth };
+}
+
+export default connect(mapStateToProps) (Header);
