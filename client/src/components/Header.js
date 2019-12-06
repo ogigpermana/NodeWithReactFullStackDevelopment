@@ -10,7 +10,10 @@ import StripePayments from './Payments';
 
 const myStyle = {
   textDecoration: "none",
-  color: "#fff"
+  color: "#fff",
+  background: "#d81a1a",
+  padding: "7px",
+  borderRadius: "3px"
 }
 
 class Header extends Component{
@@ -20,7 +23,7 @@ class Header extends Component{
         return "Load state...";
       case false:
         return(
-            <li><a style={myStyle} href="/auth/google"><FontAwesomeIcon icon={faGoogle} /> Login with google</a></li>
+            <li><a style={myStyle} href="/auth/google" variant="danger"><FontAwesomeIcon icon={faGoogle} /> Login with google</a></li>
         );
       default:
         return (
