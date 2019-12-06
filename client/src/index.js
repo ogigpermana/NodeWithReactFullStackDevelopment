@@ -14,4 +14,7 @@ ReactDOM.render(
         <App />
    </Provider>
     , document.querySelector("#root")
-)
+);
+
+// console.log('Stripe Publishable Keys is', process.env.REACT_APP_STRIPE_KEY);
+// console.log('Environment in my app is', process.env.NODE_ENV);

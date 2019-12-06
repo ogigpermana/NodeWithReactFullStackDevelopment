@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav, Button } from 'react-bootstrap';
+import { Navbar, Nav, Button, Badge } from 'react-bootstrap';
 import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import StripePayments from './Payments';
 
 const myStyle = {
   textDecoration: "none",
@@ -19,31 +20,44 @@ class Header extends Component{
         return "Load state...";
       case false:
         return(
-            <a style={myStyle} href="/auth/google"><FontAwesomeIcon icon={faGoogle} /> Login with google</a>
+            <li><a style={myStyle} href="/auth/google"><FontAwesomeIcon icon={faGoogle} /> Login with google</a></li>
         );
       default:
         return (
-          <a style={myStyle} href="/api/logout"><FontAwesomeIcon icon={faSignOutAlt} /> Logout</a>
+          [
+            <Nav.Link key="1"><StripePayments/></Nav.Link>,
+            <Button key="3" variant="warning" size="sm" style={{ height: "38px", marginTop: "7px"}}>
+              Credits <Badge variant="light">{ this.props.auth.credits }</Badge>
+              <span className="sr-only">unread messages</span>
+            </Button>,
+            <Nav.Link key="2" href="/api/logout" style={{ marginTop: "7px", marginLeft: "7px" }}>
+              <FontAwesomeIcon icon={faPowerOff}/>
+            </Nav.Link>
+          ]
         );
     }
   }
   render(){
     console.log(this.props);
     return(
-      <Navbar bg="dark" expand="lg" variant="dark">
-        <Navbar.Brand>
-          <Link style={{ textDecoration: "none", color: "#fff" }}
-            to={this.props.auth ? '/surveys' : '/'}
-          >
-            SFI
-          </Link>
-          </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar.Brand><Link style={{ textDecoration: "none", color: "#fff" }} to={this.props.auth ? '/surveys' : '/'}>Surel Feedback Info</Link></Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Link style={{ textDecoration:"none", color:"#fff" }} to={this.props.auth ? '/surveys' : '/'}><FontAwesomeIcon icon="home-alt"></FontAwesomeIcon> Home</Link>
+            {/* <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+            </NavDropdown> */}
           </Nav>
-          <Button variant="outline-danger">{this.renderState()}</Button>
+          <Nav style={{ color:"#fff" }}>
+            {this.renderState()}
+          </Nav>
         </Navbar.Collapse>
       </Navbar>
     )
