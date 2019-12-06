@@ -34,4 +34,4 @@ untuk lebih jelasnya silahkan buka file package.json yang ada pada root project 
 hasilnya bisa dilihat pada logs yang ada di terminal!
 
 demo aplikasinya link dibawah ini:
-[Startup Reviewer](https://startup-reviewer.herokuapp.com/)
+[Surel Info Feedback](https://surelinfofeedback.herokuapp.com/)
