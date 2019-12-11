@@ -1,3 +1,4 @@
+const keys = require('../../config/keys');
 module.exports = survey => {
     return `
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -33,8 +34,8 @@ module.exports = survey => {
                                 </tr>
                                 <tr>
                                     <td style="text-decoration:inline; text-align:center">
-                                    <a href="http://localhost:3000" style="background-color:#EB7035;border:1px solid #EB7035;border-radius:3px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:16px;line-height:44px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;">Yes</a>
-                                    <a href="http://localhost:3000" style="background-color:#dd1818;border:1px solid #EB7035;border-radius:3px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:16px;line-height:44px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;">No</a>
+                                    <a href="${ keys.directDomain }" style="background-color:#EB7035;border:1px solid #EB7035;border-radius:3px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:16px;line-height:44px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;">Yes</a>
+                                    <a href="${ keys.directDomain }" style="background-color:#dd1818;border:1px solid #EB7035;border-radius:3px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:16px;line-height:44px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;">No</a>
                                     </td>
                                 </tr>
                             </table>
