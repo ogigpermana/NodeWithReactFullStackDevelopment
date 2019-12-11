@@ -16,7 +16,7 @@ module.exports = survey => {
                 <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border: 1px solid #cccccc; border-collapse: collapse;">
                     <tr>
                         <td align="center" bgcolor="#fff" style="padding: 40px 0 30px 0; color: #153643; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;">
-                            <img src="https://lh3.googleusercontent.com/BsxPDiP7uPgflrlARHTs7tNVQP7BhEvReS_eR_iWsgDEqq-zrWT19O6VmMGS41vaOAgI8GiBr4tvAedUbl08EfsT4bxazVfYMBQpxptI-fMmOymGl4tcqy5wGIcsE-3XXvxuvk_BRX1vrn-i5QqtOpPx3xYTrhECz-lbpdl6p9ULQk3vVD1JoRne9oCG9vVxuOVclaw847M8CtOl6RbMG2Q8LVjjKOjkl4MoC6-bCSfjvrq1f11JyKwpr3__ipWSc2Pwy1hXClN_z7hvrLaorWbAHMv-Lt8c_PBwLlhYWChxhLHjR1SCDAQm8qEtOHPOndiMWIDtKiEKOxV06BXPucT-GgmIFPDjq3BLsSWz5BeobUT3fUMgRCai19oXfJTb2bn5SGR6WPrHYGGAUVPIg2Ao1XzFSWgthqItyUGziNqY5jmre7kj4-Lsb4AtRGFSr3Wu3vaAvFZTtzJnAIVJWkz3TPlkRtMfjUVz_QrJbpPu9IJgsaO4b1s70JG9bUY0Be5Mp5EC7_ueDF7cKENTQz7WVUJBMI54x5uIhC9U9BchAtyWX8eEas6V5NpIjY2HzW4iuo5MSWhFrR8M3rbvUOX6ULmKm_C8y6L6qzlLrzlQ2L7CD_xxELceb5sweUVBZ-c4RKHNF3fHZVy0V02L6ZajyHdbuMNxQbSPE-jYuHCokR-dQCbfbnc=w750-h375-no" alt="Creating Email Magic" width="300" height="230" style="display: block;" />
+                            <img src="https://cdn.pixabay.com/photo/2017/12/01/08/52/feedback-2990424_960_720.jpg" alt="Surel Feedback Information" width="300" height="230" style="display: block;" />
                         </td>
                     </tr>
                     <tr>
