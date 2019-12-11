@@ -34,8 +34,8 @@ module.exports = survey => {
                                 </tr>
                                 <tr>
                                     <td style="text-decoration:inline; text-align:center">
-                                    <a href="${ keys.directDomain }" style="background-color:#EB7035;border:1px solid #EB7035;border-radius:3px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:16px;line-height:44px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;">Yes</a>
-                                    <a href="${ keys.directDomain }" style="background-color:#dd1818;border:1px solid #EB7035;border-radius:3px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:16px;line-height:44px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;">No</a>
+                                    <a href="${ keys.redirectDomain }" style="background-color:#EB7035;border:1px solid #EB7035;border-radius:3px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:16px;line-height:44px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;">Yes</a>
+                                    <a href="${ keys.redirectDomain }" style="background-color:#dd1818;border:1px solid #EB7035;border-radius:3px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:16px;line-height:44px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;">No</a>
                                     </td>
                                 </tr>
                             </table>
