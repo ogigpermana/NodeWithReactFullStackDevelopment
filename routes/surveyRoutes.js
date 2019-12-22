@@ -2,11 +2,15 @@ const mongoose = require('mongoose');
 const authLogin = require('../middlewares/authLogin');
 const authCredits = require('../middlewares/authCredits');
 const Mailer = require('../services/Mailer');
-const surveyTemplate = require('../services/_email_template/emailTemplate');
+const surveyTemplate = require('../services/_email_template/email_template');
 
 const Survey = mongoose.model('surveys');
 
 module.exports = app => {
+    app.get('/api/surveys/feedback-thanks', (req, res) => {
+        res.send();
+    });
+
     app.post('/api/surveys', authLogin, authCredits, async (req, res) => {
 
         const { title, subject, body, recipients } = req.body;

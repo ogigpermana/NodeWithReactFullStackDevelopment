@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Button, Badge } from 'react-bootstrap';
 import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
@@ -41,7 +40,6 @@ class Header extends Component{
     }
   }
   render(){
-    console.log(this.props);
     return(
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Navbar.Brand><Link style={{ textDecoration: "none", color: "#fff" }} to={this.props.auth ? '/surveys' : '/'}>Surel Feedback Info</Link></Navbar.Brand>

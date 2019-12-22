@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import StripeCheckout from 'react-stripe-checkout';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCreditCard} from '@fortawesome/free-solid-svg-icons';
 import { Button } from 'react-bootstrap';

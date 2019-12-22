@@ -5,9 +5,9 @@ import Container from '@material-ui/core/Container';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import Landing from './Landing';
+import SurveyNew from './surveys/SurveyNew';
 import Dashboard from './Dashboard';
-
-const SurveyNew = () => <h2>SurveyNew</h2>
+import AlertFeedback from './AlertFeedback';
 
 class App extends Component{
     componentDidMount(){
@@ -21,7 +21,8 @@ class App extends Component{
                 <Container fixed>
                     <Route exact path="/" component={Landing}/>
                     <Route exact path="/surveys" component={Dashboard}/>
-                    <Route path="/surveys/new" component={SurveyNew}/>
+                    <Route exact path="/surveys/new" component={SurveyNew}/>
+                    <Route exact path="/api/surveys/feedback-thanks" component={AlertFeedback}/>
                 </Container>
             </BrowserRouter>
         );
