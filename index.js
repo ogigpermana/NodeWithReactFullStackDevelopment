@@ -9,7 +9,10 @@ require('./models/Survey');
 require('./models/User');
 require('./services/passport');
 
-mongoose.connect(keys.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true}); 
+mongoose.connect(keys.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => console.log('DB Connected!'))
+.catch(err => {
+console.log(Error, err.message);
+});
 
 const app = express();
  app.use(bodyParser.json());
