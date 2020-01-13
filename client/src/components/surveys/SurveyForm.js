@@ -39,7 +39,7 @@ class SurveyForm extends Component{
                 <Card>
                     <Card.Header as="h6">Create a new survey</Card.Header>
                     <Card.Body>
-                        <Form onSubmit={ this.props.handleSubmit(values => console.log(values))}>
+                        <Form onSubmit={ this.props.handleSubmit(this.props.onSurveySubmit)}>
                             <Form.Group>
                                 { this.renderFields() }
                             </Form.Group>
@@ -91,5 +91,6 @@ function validate(values){
 
 export default reduxForm({
     validate,
-    form: 'surveyForm'
+    form: 'surveyForm',
+    destroyOnUnmount:false
 }) (SurveyForm)
