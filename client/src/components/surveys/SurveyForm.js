@@ -7,17 +7,11 @@ import InputField from './InputField';
 import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import validateEmails from '../../utils/validateEmails'
-
-const FIELDS = [
-    { label: "Survey Title", name: "title", noValueError: "Please provide a valid title" },
-    { label: "Subject Line", name: "subject", noValueError: "Please provide a valid subject" },
-    { label: "Email Body", name: "body", noValueError: "Please provide a valid body" },
-    { label: "Recipient List", name: "emails", noValueError: "Please provide a valid emails" }
-];
+import formFields from './formFields'; 
 
 class SurveyForm extends Component{
     renderFields(){
-        return _.map(FIELDS, ({ label, name }) =>{
+        return _.map(formFields, ({ label, name }) =>{
             return(
                 <div key={ name }>
                      <Form.Label>{ label }</Form.Label>
@@ -73,7 +67,7 @@ function validate(values){
     errors.emails = validateEmails(values.emails || '');
     
     // using lodash validation style
-    _.each(FIELDS, ({ name, noValueError }) => {
+    _.each(formFields, ({ name, noValueError }) => {
         /**
          * values[name]
          * mean

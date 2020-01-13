@@ -9,7 +9,7 @@ class SurveyNew extends Component {
     //     this.state = { surveyFormReview: false }
     // }
 
-    state = { survyeFormReview: false };
+    state = { surveyFormReview: false };
 
     renderContent(){
         if(this.state.surveyFormReview){
